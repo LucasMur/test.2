@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class leftplayer : MonoBehaviour
 {
+    public string AxisName;
     public float thrust;
     private Rigidbody _rb;
 
@@ -17,7 +18,7 @@ public class leftplayer : MonoBehaviour
     void FixedUpdate()
     {
        
-           _rb.AddForce(Vector3.up * thrust * Input.GetAxis("Vertical"));
+           _rb.AddForce(Vector3.up * thrust * Input.GetAxis("AxisName"));
         
     }
 }
